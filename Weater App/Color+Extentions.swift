@@ -13,3 +13,5 @@ extension UIColor {
     static let primaryColor = UIColor(named: "primaryColor")
     static let appSoftGray = UIColor(named: "softGray")
 }
+
+
