@@ -19,7 +19,8 @@ class Service {
     // ATUALIZADO: URL base para a API gratuita de tempo atual.
     private let baseURL: String = "https://api.openweathermap.org/data/2.5/weather"
     // Lembre-se de proteger sua chave de API em um aplicativo real.
-    private let apiKey: String = "8f8b00810a0f32122a8217877d806d95"
+//    private let apiKey: String = "8f8b00810a0f32122a8217877d806d95"
+    private let apiKey = APIKeyManager.openWeatherMap
     private let session = URLSession.shared
     
     // ATUALIZADO: A função agora busca e retorna o novo modelo 'CurrentWeatherData'.
