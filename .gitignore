@@ -1,0 +1,39 @@
+# Swift/Xcode .gitignore
+
+## General
+.DS_Store
+.localized
+build/
+DerivedData/
+
+## Xcode
+# Xcode project files
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata/
+*.xcworkspace/contents.xcworkspacedata
+*.xcworkspace/xcuserdata/
+xcuserdata/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Build and Test Artifacts
+*.ipa
+*.app
+*.dSYM/
+*.xcarchive
+*.xcresult
+
+# Local dependency managers
+Carthage/Build/
+Pods/
+.swiftpm/
+
+# User-specific files
+*.xccheckout
+
+# Outros
+*.moved-aside
+*.swp
+*~
