@@ -7,25 +7,19 @@
 
 import Foundation
 
-// Estrutura para representar uma cidade com suas coordenadas.
 struct City {
     let lat: String
     let lon: String
     let name: String
 }
 
-// Classe responsável por buscar os dados da API OpenWeatherMap.
 class Service {
-    // ATUALIZADO: URL base para a API gratuita de tempo atual.
     private let baseURL: String = "https://api.openweathermap.org/data/2.5/weather"
-    // Lembre-se de proteger sua chave de API em um aplicativo real.
-//    private let apiKey: String = "8f8b00810a0f32122a8217877d806d95"
-    private let apiKey = APIKeyManager.openWeatherMap
+    private let apiKey: String = "8f8b00810a0f32122a8217877d806d95"
+//    private let apiKey = APIKeyManager.openWeatherMap
     private let session = URLSession.shared
     
-    // ATUALIZADO: A função agora busca e retorna o novo modelo 'CurrentWeatherData'.
     func fetchData(city: City, _ completion: @escaping (CurrentWeatherData?) -> Void) {
-        // Adicionando 'units=metric' para receber temperaturas em Celsius e 'lang=pt_br' para português.
         let urlString = "\(baseURL)?lat=\(city.lat)&lon=\(city.lon)&appid=\(apiKey)&units=metric&lang=pt_br"
         
         guard let url = URL(string: urlString) else {
@@ -47,7 +41,6 @@ class Service {
                 return
             }
             
-            // Tenta decodificar os dados JSON usando o novo modelo CurrentWeatherData
             do {
                 let weatherData = try JSONDecoder().decode(CurrentWeatherData.self, from: data)
                 completion(weatherData)
@@ -89,7 +82,6 @@ class Service {
                     return
                 }
                 
-                // Tenta decodificar os dados JSON usando o novo modelo CurrentWeatherData
                 do {
                     let weatherData = try JSONDecoder().decode(ForecastData.self, from: data)
                     completion(weatherData)
@@ -108,9 +100,8 @@ class Service {
     }
     
     
-    // MARK: - NOVOS MODELOS DE DADOS PARA A API GRATUITA
+    // MARK: - NOVOS MODELOS DE DADOS PARA A API
     
-    // Estrutura principal para a resposta da API /weather
     struct CurrentWeatherData: Codable {
         let coord: Coord
         let weather: [Weather]
@@ -127,7 +118,6 @@ class Service {
         let cod: Int
     }
     
-    // Estruturas aninhadas que compõem a resposta principal.
     struct Coord: Codable {
         let lon, lat: Double
     }
@@ -169,15 +159,13 @@ class Service {
         let city: CityInfo
     }
     
-    
-    // Cada item na lista de previsão
     struct ForecastListItem: Codable {
         let dt: Int
         let main: Main
         let weather: [Weather]
         let clouds: Clouds
         let wind: Wind
-        let pop: Double // Probabilidade de precipitação
+        let pop: Double
         let dtTxt: String
         
         enum CodingKeys: String, CodingKey {
@@ -186,7 +174,6 @@ class Service {
         }
     }
     
-    // Informações da cidade na resposta da previsão
     struct CityInfo: Codable {
         let id: Int
         let name: String
@@ -195,11 +182,10 @@ class Service {
         let population, timezone, sunrise, sunset: Int
     }
 
-// Adicione esta struct no seu arquivo de modelos
 struct DailyForecast {
-    let day: String? // Ex: "Sexta"
+    let day: String?
     let minTemp: Double
     let maxTemp: Double
-    let icon: String // Ícone para representar o dia
+    let icon: String
 }
     

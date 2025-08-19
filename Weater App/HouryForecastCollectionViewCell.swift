@@ -9,7 +9,11 @@ import UIKit
 
 class HouryForecastCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Static Properties
+    
     static let identifier: String = "HouryForecast"
+    
+    // MARK: - UI Components
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [hourLabel,
@@ -53,7 +57,7 @@ class HouryForecastCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,12 +69,15 @@ class HouryForecastCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public Methods
     
     func loadData(time:String?, icon:UIImage?, temp:String?) {
         hourLabel.text = time
         iconImageView.image = icon
         temperatureLabel.text = temp
     }
+    
+    // MARK: - View Setup
     
     private func setupView(){
         setHierarchy()

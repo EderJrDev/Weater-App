@@ -65,6 +65,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BCB2BA22E3716CF00D7ABFA /* Build configuration list for PBXNativeTarget "Weater App" */;
 			buildPhases = (
+				6B4C6F302E4F839F008A2A7E /* ShellScript */,
 				6BCB2B8B2E3716CE00D7ABFA /* Sources */,
 				6BCB2B8C2E3716CE00D7ABFA /* Frameworks */,
 				6BCB2B8D2E3716CE00D7ABFA /* Resources */,
@@ -126,6 +127,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B4C6F302E4F839F008A2A7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Build-time API Key is: ${OPENWEATHER_API_KEY}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BCB2B8B2E3716CE00D7ABFA /* Sources */ = {
@@ -196,8 +217,6 @@
 		};
 		6BCB2BA52E3716CF00D7ABFA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 6BCB2B912E3716CE00D7ABFA /* Weater App */;
-			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -261,8 +280,6 @@
 		};
 		6BCB2BA62E3716CF00D7ABFA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 6BCB2B912E3716CE00D7ABFA /* Weater App */;
-			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
