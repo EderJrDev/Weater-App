@@ -9,7 +9,11 @@ import UIKit
 
 class DailyForecastTableViewCell: UITableViewCell {
     
+    // MARK: - Static Properties
+    
     static let identifier: String = "DailyForecast"
+    
+    // MARK: - UI Components
     
     private lazy var weekDayLAbel: UILabel = {
         let label = UILabel()
@@ -51,6 +55,8 @@ class DailyForecastTableViewCell: UITableViewCell {
         stackView.spacing = 15
         return stackView
     }()
+    
+    // MARK: - Initializers
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -60,6 +66,8 @@ class DailyForecastTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
     func loadData(weekDay: String?, min:String?, max: String?, icon: UIImage?){
         weekDayLAbel.text = weekDay

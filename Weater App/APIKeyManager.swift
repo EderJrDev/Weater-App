@@ -15,6 +15,7 @@ enum APIKeyManager {
         }
 
         // 2. Tenta ler a chave que você configurou no Passo 4
+        // APIKeyManager.swift
         guard let apiKey = infoDictionary["OpenWeatherApiKey"] as? String else {
             fatalError("OpenWeatherApiKey not set in Info.plist")
         }
