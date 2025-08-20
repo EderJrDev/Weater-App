@@ -21,6 +21,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B4C6F3B2E5551F2008A2A7E /* projectImages */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = projectImages;
+			sourceTree = "<group>";
+		};
 		6BCB2B912E3716CE00D7ABFA /* Weater App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -47,6 +52,7 @@
 			children = (
 				6BCB2B912E3716CE00D7ABFA /* Weater App */,
 				6BCB2B902E3716CE00D7ABFA /* Products */,
+				6B4C6F3B2E5551F2008A2A7E /* projectImages */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +80,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				6B4C6F3B2E5551F2008A2A7E /* projectImages */,
 				6BCB2B912E3716CE00D7ABFA /* Weater App */,
 			);
 			name = "Weater App";
