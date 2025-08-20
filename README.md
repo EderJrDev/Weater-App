@@ -1,5 +1,10 @@
 # App de Clima 🌤️ (Weather App)
 
+<p align="center">
+  <img src="https://github.com/EderJrDev/Weater-App/blob/main/projectImages/weaterApp-moon.png" alt="Modo Dia" width="800">
+<!--   <img src="https://raw.githubusercontent.com/EderJrDev/Weater-App/main/projectImages/weaterApp-moon.png" alt="Modo Noite" width="300"> -->
+</p>
+
 ## 📖 Sobre
 
 Este é um aplicativo de previsão do tempo para iOS, desenvolvido como um projeto de portfólio para demonstrar habilidades em desenvolvimento nativo com Swift. O objetivo principal foi aplicar as melhores práticas do mercado, incluindo uma arquitetura limpa, componentização e código testável, seguindo os requisitos de vagas para desenvolvedores iOS.
