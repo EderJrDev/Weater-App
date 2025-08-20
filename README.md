@@ -71,21 +71,6 @@ Weater App/
     └── Core+Extensions.swift
 ```
 
----
-
-## ⚙️ Como Executar
-
-1.  Clone este repositório:
-    ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
-    ```
-2.  Abra o arquivo `Weater App.xcodeproj` no Xcode.
-3.  Selecione um simulador de iPhone e pressione `Cmd+R` para compilar e executar o projeto.
-
-**Nota:** A chave da API da OpenWeatherMap está no código para fins de demonstração. Em um projeto real, ela seria protegida e gerenciada de forma segura.
-
----
-
 ## 🔮 Próximos Passos
 
 * [ ] Implementar uma tela de busca para que o usuário possa escolher a cidade.
